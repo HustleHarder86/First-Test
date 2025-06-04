@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Amy Web App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        #main {
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid #e31b1b;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            max-width: 600px;
+        }
+        button {
+            background-color: #e31b1b;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c00000;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Hello, Amy! You are About to become super successful and all of your dreams will come true!</h1>
+        <button id="alertBtn">Click Me</button>
+    </div>
+    <script>
+        const quotes = [
+            'The only way to do great work is to love what you do. - Steve Jobs',
+            'Don\'t watch the clock; do what it does. Keep going. - Sam Levenson',
+            'Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill',
+            'Believe you can and you\'re halfway there. - Theodore Roosevelt',
+            'Your limitation—it\'s only your imagination.',
+            'Push yourself, because no one else is going to do it for you.',
+            'Great things never come from comfort zones.',
+            'Dream it. Wish it. Do it.'
+        ];
+
+        document.getElementById('alertBtn').addEventListener('click', () => {
+            const quote = quotes[Math.floor(Math.random() * quotes.length)];
+            alert(quote);
+        });
+    </script>
+</body>
+</html>
